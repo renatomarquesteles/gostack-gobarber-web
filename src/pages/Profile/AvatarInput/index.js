@@ -5,7 +5,7 @@ import api from '~/services/api';
 import { Container } from './styles';
 
 export default function AvatarInput() {
-  const { defaultValue, registerField } = useField('avatar');
+  const { defaultValue, registerField, fieldName } = useField('avatar');
 
   const [file, setFile] = useState(defaultValue && defaultValue.id);
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
@@ -20,7 +20,7 @@ export default function AvatarInput() {
         path: 'dataset.file',
       });
     }
-  }, [ref, registerField]);
+  }, [ref.current, fieldName]); // eslint-disable-line
 
   async function handleChange(e) {
     const data = new FormData();

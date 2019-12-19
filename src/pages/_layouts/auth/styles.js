@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background: radial-gradient(#5729d9, #280868);
   display: flex;
   justify-content: center;
