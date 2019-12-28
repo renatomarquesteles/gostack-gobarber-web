@@ -4,6 +4,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
 
+import 'dotenv/config';
 import './config/ReactotronConfig';
 
 import Routes from './routes';
